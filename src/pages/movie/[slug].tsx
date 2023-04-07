@@ -7,7 +7,8 @@ import { Movie } from "../../components/index";
 const query = groq`*[_type == "movie" && slug.current == $slug][0]{
   title,
   poster,
-  overview
+  overview,
+  releaseDate
 }`;
 
 // Prepare Next.js to know which routes already exist

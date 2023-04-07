@@ -6,10 +6,12 @@ import imageUrlBuilder from "@sanity/image-url";
 import { SanityDocument } from "@sanity/client";
 import { client } from "@/lib/sanity.client";
 import Head from "next/head";
+import moment from "moment";
 
 const builder = imageUrlBuilder(client);
 
 export const Movie = ({ movie }: { movie: SanityDocument }) => {
+  const date = moment(movie.releaseDate).format("D [de] MMMM [de] YYYY").toString()
   return (
     <>
       <Head>
@@ -24,6 +26,7 @@ export const Movie = ({ movie }: { movie: SanityDocument }) => {
           alt={movie.title}
         />
         <PortableText value={movie.overview} />
+        <p>{date}</p>
       </main>
     </>
   );
