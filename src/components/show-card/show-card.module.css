@@ -1,45 +1,120 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
-    margin-bottom: 144px;
+    height: 481px;
 }
+
 .infoContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 145px;
-    width: 300px;  
-    background-color: white;
+    width: 257px;  
+    background-color: var(--white);
     position: absolute;
-    bottom: -140px;
-    transition: height 0.5s ease; 
+    bottom: 80px;
+    transition: height 0.4s ease; 
+}
+.container:hover > .infoContainer {
+    height: 402px;
+    transition: height 0.4s ease; 
 }
 .infoContainer:hover {
-    height: 445px;
-    transition: height 0.5s ease; 
+    height: 402px;
+    transition: height 0.4s ease; 
 }
 .showName {
     font-size: 17px;
-    max-width: 196px;
+    max-width: 220px;
     text-align: center;
     padding-top: 23px;
     padding-bottom: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'Barlow', sans-serif;
+}
+.showName:hover {
+    color: var(--softGrey);
 }
 .dateContainer {
     display: flex;
+    color: var(--black);
+    font-weight: 400;
     flex-direction: row;
-    gap: 5px;
+    gap: 21px;
     justify-content: center;
     align-items: center;
     padding-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 12px;
 }
-.text {
+.location {
     font-size: 16;
-    max-width: 300px;
+    max-width: 190px;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 25px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5px;
+    overflow: scroll;
+    max-height: 280px;
 
+}
+.container:hover > .infoContainer:hover > .location /* + .dateContainer */ {
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+}
+.container:hover > .infoContainer:hover > .shareContainer /* + .dateContainer */ {
+    display: flex;
+}
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 74px;
+    width: 257px;
+    position: absolute;
+    bottom: -73px;
+}
+.button {
+    position: relative;
+    background-color: var(--black);
+    padding: 5px;
+    color: var(--white);
+    border-radius: 5px;
+    border: solid transparent 0px;
+    padding: 12px;
+    top: 33px;  
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+}
+.button:hover {
+    background-color: var(--softGrey);
+    transition: background-color 200ms linear;
+}
+.shareContainer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 257px;
+    font-family: 'Barlow', sans-serif;
+
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px
 }
