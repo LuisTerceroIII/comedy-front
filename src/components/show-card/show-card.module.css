@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 144px;
+}
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 145px;
+    width: 300px;  
+    background-color: white;
+    position: absolute;
+    bottom: -140px;
+    transition: height 0.5s ease; 
+}
+.infoContainer:hover {
+    height: 445px;
+    transition: height 0.5s ease; 
+}
+.showName {
+    font-size: 17px;
+    max-width: 196px;
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 12px;
+}
+.dateContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.text {
+    font-size: 16;
+    max-width: 300px;
+    text-align: center;
+
+}

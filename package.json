@@ -11,9 +11,11 @@
   "dependencies": {
     "@portabletext/react": "^2.0.2",
     "@sanity/image-url": "^1.0.2",
+    "@types/aphrodite": "^2.0.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
+    "aphrodite": "^2.4.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.3.0",
     "moment": "^2.29.4",
